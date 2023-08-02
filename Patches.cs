@@ -52,7 +52,7 @@ namespace Headbob
 
         public static bool isType(Type type)
         {
-            return type.GetField("class1516_0") != null && type.GetField("func_0") != null;
+            return type.GetField("class1446_0") != null && type.GetField("func_0") != null;
         }
 
         protected override MethodBase GetTargetMethod()
