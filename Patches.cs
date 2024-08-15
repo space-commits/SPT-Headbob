@@ -1,5 +1,5 @@
-﻿using Aki.Reflection.Patching;
-using Aki.Reflection.Utils;
+﻿using SPT.Reflection.Patching;
+using SPT.Reflection.Utils;
 using EFT.UI.Settings;
 using System;
 using System.Collections.ObjectModel;
@@ -42,7 +42,7 @@ namespace Headbob
     {
         protected override MethodBase GetTargetMethod()
         {
-            return typeof(GClass959.Class1550).GetMethod("method_1", BindingFlags.Public | BindingFlags.Instance);
+            return typeof(GClass960.Class1578).GetMethod("method_1", BindingFlags.Public | BindingFlags.Instance);
         }
 
         [PatchPrefix]
