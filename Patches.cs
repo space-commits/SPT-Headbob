@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace Headbob
 {
-    public class HeadBonPatch : ModulePatch
+    public class HeadBobRangePatch : ModulePatch
     {
         protected override MethodBase GetTargetMethod()
         {
@@ -42,7 +42,7 @@ namespace Headbob
     {
         protected override MethodBase GetTargetMethod()
         {
-            return typeof(GClass960.Class1578).GetMethod("method_1", BindingFlags.Public | BindingFlags.Instance);
+            return typeof(GClass1040.Class1690).GetMethod("method_1", BindingFlags.Public | BindingFlags.Instance);
         }
 
         [PatchPrefix]

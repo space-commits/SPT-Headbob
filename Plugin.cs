@@ -7,7 +7,7 @@ namespace Headbob
     {
         private void Awake()
         {
-            new HeadBonPatch().Enable();
+            new HeadBobRangePatch().Enable();
             new HeadBobClampPatch().Enable();
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
         }
