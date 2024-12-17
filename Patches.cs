@@ -6,6 +6,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
 using UnityEngine;
+using HeadBobClass = GClass1040;
+using HeadBobSibClass = GClass1040.Class1690;
 
 namespace Headbob
 {
@@ -15,24 +17,11 @@ namespace Headbob
         {
             return typeof(GameSettingsTab).GetMethod("Show");
         }
-        [PatchPrefix]
-        private static void PatchPrefix(ref ReadOnlyCollection<float> ___readOnlyCollection_1)
+
+        [PatchPostfix]
+        private static void PatchPostfix(EFT.UI.NumberSlider ____headbobbing, HeadBobClass ___gclass1040_0)
         {
-            float[] headBobRange = new float[]
-            {
-            0.0f,
-            0.1f,
-            0.2f,
-            0.3f,
-            0.4f,
-            0.5f,
-            0.6f,
-            0.7f,
-            0.8f,
-            0.9f,
-            1f
-            };
-            ___readOnlyCollection_1 = Array.AsReadOnly(headBobRange);
+            SettingsTab.BindNumberSliderToSetting(____headbobbing, ___gclass1040_0.HeadBobbing, 0f, 1f, "F1");
         }
     }
 
@@ -42,7 +31,7 @@ namespace Headbob
     {
         protected override MethodBase GetTargetMethod()
         {
-            return typeof(GClass1040.Class1690).GetMethod("method_1", BindingFlags.Public | BindingFlags.Instance);
+            return typeof(HeadBobSibClass).GetMethod("method_1", BindingFlags.Public | BindingFlags.Instance);
         }
 
         [PatchPrefix]
