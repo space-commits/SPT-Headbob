@@ -6,8 +6,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
 using UnityEngine;
-using HeadBobClass = GClass1040;
-using HeadBobSibClass = GClass1040.Class1690;
+using HeadBobClass = GClass1053;
+using HeadBobSibClass = GClass1053.Class1718;
 
 namespace Headbob
 {
@@ -19,9 +19,9 @@ namespace Headbob
         }
 
         [PatchPostfix]
-        private static void PatchPostfix(EFT.UI.NumberSlider ____headbobbing, HeadBobClass ___gclass1040_0)
+        private static void PatchPostfix(EFT.UI.NumberSlider ____headbobbing, HeadBobClass ___gclass1053_0)
         {
-            SettingsTab.BindNumberSliderToSetting(____headbobbing, ___gclass1040_0.HeadBobbing, 0f, 1f, "F1");
+            SettingsTab.BindNumberSliderToSetting(____headbobbing, ___gclass1053_0.HeadBobbing, 0f, 1f, "F1");
         }
     }
 
